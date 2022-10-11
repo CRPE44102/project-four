@@ -9,14 +9,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
+    <script src="scripts/main.js" defer></script>
 </head>
-<body>
+<body class="relative w-screen overflow-hidden">
     <header class="h-14 p-4 flex justify-between items-center">
         <h1 class="text-2xl font-semibold">NowLearning</h1>
 
         <div>
             <span class="material-icons mr-4 cursor-pointer">search</span>
-            <span class="material-icons cursor-pointer">update</span>
+            <span id="latest-updates-icon-button" class="material-icons cursor-pointer">update</span>
         </div>
     </header>
 
@@ -42,5 +43,15 @@
             </div>
         </div>
     </main>
+
+    <aside id="latest-updates-container" class="w-full h-screen z-10 bg-white absolute top-0 -right-full">
+        <header class="h-14 p-4 flex justify-between items-center">
+            <span id="latest-updates-close-icon-button" class="material-icons cursor-pointer">arrow_back</span>
+        </header>
+        
+        <div class="px-4">
+            <h2 class="font-semibold text-xl my-4">Seneste hændelser</h2>
+        </div>
+    </aside>
 </body>
 </html>
