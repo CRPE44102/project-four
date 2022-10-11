@@ -11,8 +11,8 @@
 
     <script src="scripts/main.js" defer></script>
 </head>
-<body class="relative w-screen overflow-hidden pb-14">
-    <header class="h-14 p-4 flex justify-between items-center">
+<body class="relative w-screen overflow-hidden">
+    <header class="h-14 p-4 flex justify-between items-center shadow-sm bg-white z-10">
         <h1 class="text-2xl font-semibold">NowLearning</h1>
 
         <div>
@@ -21,9 +21,81 @@
         </div>
     </header>
 
-    <main class="px-4">
+    <main class="px-4 overflow-scroll inner-container">
         <h2 class="font-semibold text-xl my-4">Kategorier</h2>
 
+        <div class="shadow rounded p-4 mb-4">
+            <div class="flex justify-between items-center mb-2">
+                <h3 class="font-medium text-lg">Skole Meddelelser</h3>
+
+                <small class="opacity-50 uppercase font-bold text-xs tracking-wide">53 indlæg</small>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos impedit optio eveniet quas soluta, earum deserunt. Quaerat laudantium asperiores ullam! Sapiente, nostrum dicta! Non excepturi autem iure, amet sit optio!</p>
+
+            <div class="h-0.5 my-4 bg-black opacity-5 rounded"></div>
+
+            <div>
+                <h4 class="font-medium mb-1">Seneste indlæg</h4>
+
+                <p>Indlæg titel skal skrives her</p>
+                <small class="opacity-50">af Sarah Rosenlund for 2 timer siden</small>
+            </div>
+        </div>
+        <div class="shadow rounded p-4 mb-4">
+            <div class="flex justify-between items-center mb-2">
+                <h3 class="font-medium text-lg">Skole Meddelelser</h3>
+
+                <small class="opacity-50 uppercase font-bold text-xs tracking-wide">53 indlæg</small>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos impedit optio eveniet quas soluta, earum deserunt. Quaerat laudantium asperiores ullam! Sapiente, nostrum dicta! Non excepturi autem iure, amet sit optio!</p>
+
+            <div class="h-0.5 my-4 bg-black opacity-5 rounded"></div>
+
+            <div>
+                <h4 class="font-medium mb-1">Seneste indlæg</h4>
+
+                <p>Indlæg titel skal skrives her</p>
+                <small class="opacity-50">af Sarah Rosenlund for 2 timer siden</small>
+            </div>
+        </div>
+        <div class="shadow rounded p-4 mb-4">
+            <div class="flex justify-between items-center mb-2">
+                <h3 class="font-medium text-lg">Skole Meddelelser</h3>
+
+                <small class="opacity-50 uppercase font-bold text-xs tracking-wide">53 indlæg</small>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos impedit optio eveniet quas soluta, earum deserunt. Quaerat laudantium asperiores ullam! Sapiente, nostrum dicta! Non excepturi autem iure, amet sit optio!</p>
+
+            <div class="h-0.5 my-4 bg-black opacity-5 rounded"></div>
+
+            <div>
+                <h4 class="font-medium mb-1">Seneste indlæg</h4>
+
+                <p>Indlæg titel skal skrives her</p>
+                <small class="opacity-50">af Sarah Rosenlund for 2 timer siden</small>
+            </div>
+        </div>
+        <div class="shadow rounded p-4 mb-4">
+            <div class="flex justify-between items-center mb-2">
+                <h3 class="font-medium text-lg">Skole Meddelelser</h3>
+
+                <small class="opacity-50 uppercase font-bold text-xs tracking-wide">53 indlæg</small>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos impedit optio eveniet quas soluta, earum deserunt. Quaerat laudantium asperiores ullam! Sapiente, nostrum dicta! Non excepturi autem iure, amet sit optio!</p>
+
+            <div class="h-0.5 my-4 bg-black opacity-5 rounded"></div>
+
+            <div>
+                <h4 class="font-medium mb-1">Seneste indlæg</h4>
+
+                <p>Indlæg titel skal skrives her</p>
+                <small class="opacity-50">af Sarah Rosenlund for 2 timer siden</small>
+            </div>
+        </div>
         <div class="shadow rounded p-4">
             <div class="flex justify-between items-center mb-2">
                 <h3 class="font-medium text-lg">Skole Meddelelser</h3>
@@ -42,17 +114,79 @@
                 <small class="opacity-50">af Sarah Rosenlund for 2 timer siden</small>
             </div>
         </div>
+
+        <div class="mb-4"></div>
     </main>
 
     <aside id="latest-updates-container" class="w-full h-screen z-10 bg-white absolute top-0 -right-full">
-        <header class="h-14 p-4 flex justify-between items-center">
+        <header class="h-14 px-4 flex justify-between items-center shadow-sm">
             <span id="latest-updates-close-icon-button" class="material-icons cursor-pointer">arrow_back</span>
         </header>
-        
-        <div class="px-4">
-            <h2 class="font-semibold text-xl my-4">Seneste hændelser</h2>
 
-            <div class="shadow rounded p-4 flex justify-between items-center">
+        <div class="overflow-scroll inner-container px-4">
+            <h2 class="font-semibold text-xl my-4">Seneste hændelser</h2>
+        
+            <div class="shadow rounded p-4 flex justify-between items-center mb-4">
+                <div>
+                    <h3 class="font-medium">Ny Kommentar</h3>
+                    <small class="opacity-50 my-2">Katrine Lyng kommenterede på:</small>
+                    <p>Titel på indlæg skal være her</p>
+                </div>
+
+                <p class="font-semibold text-lg opacity-50">23 min</p>
+            </div>
+
+            <div class="shadow rounded p-4 flex justify-between items-center mb-4">
+                <div>
+                    <h3 class="font-medium">Ny Kommentar</h3>
+                    <small class="opacity-50 my-2">Katrine Lyng kommenterede på:</small>
+                    <p>Titel på indlæg skal være her</p>
+                </div>
+
+                <p class="font-semibold text-lg opacity-50">23 min</p>
+            </div>
+
+            <div class="shadow rounded p-4 flex justify-between items-center mb-4">
+                <div>
+                    <h3 class="font-medium">Ny Kommentar</h3>
+                    <small class="opacity-50 my-2">Katrine Lyng kommenterede på:</small>
+                    <p>Titel på indlæg skal være her</p>
+                </div>
+
+                <p class="font-semibold text-lg opacity-50">23 min</p>
+            </div>
+
+            <div class="shadow rounded p-4 flex justify-between items-center mb-4">
+                <div>
+                    <h3 class="font-medium">Ny Kommentar</h3>
+                    <small class="opacity-50 my-2">Katrine Lyng kommenterede på:</small>
+                    <p>Titel på indlæg skal være her</p>
+                </div>
+
+                <p class="font-semibold text-lg opacity-50">23 min</p>
+            </div>
+
+            <div class="shadow rounded p-4 flex justify-between items-center mb-4">
+                <div>
+                    <h3 class="font-medium">Ny Kommentar</h3>
+                    <small class="opacity-50 my-2">Katrine Lyng kommenterede på:</small>
+                    <p>Titel på indlæg skal være her</p>
+                </div>
+
+                <p class="font-semibold text-lg opacity-50">23 min</p>
+            </div>
+
+            <div class="shadow rounded p-4 flex justify-between items-center mb-4">
+                <div>
+                    <h3 class="font-medium">Ny Kommentar</h3>
+                    <small class="opacity-50 my-2">Katrine Lyng kommenterede på:</small>
+                    <p>Titel på indlæg skal være her</p>
+                </div>
+
+                <p class="font-semibold text-lg opacity-50">23 min</p>
+            </div>
+
+            <div class="shadow rounded p-4 flex justify-between items-center mb-4">
                 <div>
                     <h3 class="font-medium">Ny Kommentar</h3>
                     <small class="opacity-50 my-2">Katrine Lyng kommenterede på:</small>
@@ -64,7 +198,7 @@
         </div>
     </aside>
 
-    <nav class="fixed bottom-0 h-14 w-full bg-white flex justify-around items-center z-50">
+    <nav class="fixed bottom-0 h-14 w-full bg-white flex justify-around items-center z-50 shadow-sm">
         <span class="material-icons mr-4 cursor-pointer">home</span>
         <span class="material-icons mr-4 cursor-pointer">forum</span>
         <span class="material-icons mr-4 cursor-pointer">add</span>
