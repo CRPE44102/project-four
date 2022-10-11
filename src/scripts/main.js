@@ -3,12 +3,7 @@ const latestUpdatesIconButton = document.getElementById("latest-updates-icon-but
 const latestUpdatesCloseIconButton = document.getElementById("latest-updates-close-icon-button")
 
 
-latestUpdatesIconButton.addEventListener("click", (event) => {
-    latestUpdatesContainer.classList.remove("-right-full")
-    latestUpdatesContainer.classList.add("right-0")
-})
+const toggleLatestUpdates = () => latestUpdatesContainer.classList.toggle("-right-full")
 
-latestUpdatesCloseIconButton.addEventListener("click", (event) => {
-    latestUpdatesContainer.classList.remove("right-0")
-    latestUpdatesContainer.classList.add("-right-full")
-})
+latestUpdatesIconButton.addEventListener("click", toggleLatestUpdates)
+latestUpdatesCloseIconButton.addEventListener("click", toggleLatestUpdates)
