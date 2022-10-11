@@ -19,9 +19,12 @@ Hvis den siger, at I er bag ud, så indtast:
 
     git pull
 
-Hver gang I har lavet en ændring, der kan tælle som *en helhed*, uanset hvor lille den måtte være, så indtast følgende på hver sin lilje:
+Hver gang I har lavet en ændring, der kan tælle som *en helhed*, uanset hvor lille den måtte være, så indtast:
 
     git add .
+
+Øjeblikkeligt efterfulgt af denne:
+
     git commit -m "indsæt en besked her, mellem de to citations tegn, der beskriver hvad I har gjort"
 
 *Note:* Beskeden skal helst være på Engelsk og som en "kommando", f.eks. **"change header to a lighter color"** eller **"add header to call screen"**.
