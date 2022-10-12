@@ -11,6 +11,6 @@ latestUpdatesCloseIconButton.addEventListener("click", toggleLatestUpdates)
 const postResponseTextarea = document.getElementById("post-response-textarea")
 const postResponseCharacterCounter = document.getElementById("post-response-character-counter")
 
-postResponseTextarea.addEventListener("keydown", event => {
+postResponseTextarea.addEventListener("keyup", event => {
     postResponseCharacterCounter.textContent = event.currentTarget.value.length
 })
