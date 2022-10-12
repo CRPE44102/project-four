@@ -7,3 +7,10 @@ const toggleLatestUpdates = () => latestUpdatesContainer.classList.toggle("hidde
 
 latestUpdatesIconButton.addEventListener("click", toggleLatestUpdates)
 latestUpdatesCloseIconButton.addEventListener("click", toggleLatestUpdates)
+
+const postResponseTextarea = document.getElementById("post-response-textarea")
+const postResponseCharacterCounter = document.getElementById("post-response-character-counter")
+
+postResponseTextarea.addEventListener("keydown", event => {
+    postResponseCharacterCounter.textContent = event.currentTarget.value.length
+})
