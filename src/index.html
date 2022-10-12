@@ -314,7 +314,7 @@
         </div>  
     </section>
     
-    <section class="w-full h-screen z-10 bg-white absolute top-0">
+    <section class="w-full h-screen z-10 bg-white absolute top-0 hidden">
         <header class="h-14 px-4 flex justify-between items-center shadow-sm">
             <span class="material-icons cursor-pointer">arrow_back</span>
         </header>
@@ -370,6 +370,50 @@
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est laudantium quibusdam, facere voluptates obcaecati natus facilis exercitationem recusandae autem iste excepturi provident blanditiis eaque quaerat sapiente deleniti repellat beatae ut.</p>
             </div>
+        </div>
+    </section>
+
+    <section class="w-full h-screen z-10 bg-white absolute top-0">
+        <header class="h-14 px-4 flex justify-between items-center shadow-sm">
+            <span class="material-icons cursor-pointer">arrow_back</span>
+        </header>
+
+        <div class="overflow-scroll inner-container px-4">
+            <h2 class="font-semibold text-xl my-4">Opret nyt indlæg</h2>
+
+            <div class="shadow p-4 my-4">
+                <div class="flex">
+                    <span class="material-icons cursor-pointer mr-4">format_bold</span>
+                    <span class="material-icons cursor-pointer mr-4">format_italic</span>
+                    <span class="material-icons cursor-pointer mr-4">format_underline</span>
+                    <span class="material-icons cursor-pointer mr-4">format_list_bulleted</span>
+                    <span class="material-icons cursor-pointer mr-4">format_list_numbered</span>
+                    <span class="material-icons cursor-pointer mr-4">add_link</span>
+                    <span class="material-icons cursor-pointer mr-4">add_photo_alternate</span>
+                </div>
+
+                <textarea id="post-creation-textarea" class="bg-gray-100 rounded h-40 w-full mt-4 p-4 resize-none" placeholder="Skriv din besked her..."></textarea>
+                
+                <div class="flex justify-between items-center mt-4">
+                    <p class="text-xs tracking-wide opacity-75 font-medium"><span id="post-creation-character-counter">0</span> / 5000 karaktere</p>
+
+                    <div class="cursor-pointer shadow px-4 py-2">
+                        <p>Indsend</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-lg font-semibold">Guidelines til oprettelse af indlæg</h2>
+
+            <ul class="list-disc pl-8 leading-10 mb-4">
+                <li>Faucibus et lectus felis vivamus risus, egestas.</li>
+                <li>Id mauris accumsan at sit volutpat nisl.</li>
+                <li>Ultrices penatibus elit tristique vitae, est morbi aliquam sit.</li>
+                <li>Vulputate bibendum habitant morbi tellus eu, rutrum faucibus at pellentesque.</li>
+                <li>Egestas purus bibendum vestibulum, scelerisque sit imperdiet euismod.</li>
+                <li>Sem metus praesent sagittis, lacus aenean elit at sem.</li>
+                <li>Tortor cras purus, venenatis commodo, nibh volutpat mauris blandit nisl.</li>
+            </ul>
         </div>
     </section>
 
