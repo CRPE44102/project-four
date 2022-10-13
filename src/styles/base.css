@@ -5,3 +5,7 @@
 .inner-container {
     height: calc(100vh - 7rem);
 }
+
+.max-w-2\/3  {
+    max-width: 66.666666%;
+}

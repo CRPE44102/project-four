@@ -529,12 +529,85 @@
         </div>
     </section>
 
-    <nav class="fixed bottom-0 h-14 w-full bg-white flex justify-around items-center z-50 shadow-sm">
-        <span class="material-icons cursor-pointer">home</span>
-        <span class="material-icons cursor-pointer">forum</span>
-        <span class="material-icons cursor-pointer">add</span>
-        <span class="material-icons cursor-pointer">account_circle</span>
-        <span class="material-icons cursor-pointer">settings</span>
+    <section class="w-full h-screen z-10 bg-white absolute top-0">
+        <header class="h-14 p-4 flex justify-between items-center shadow-sm bg-white z-10">
+            <span class="material-icons cursor-pointer">arrow_back</span>
+            <h2 class="font-semibold flex-grow ml-4">Projekt 4, gruppe samtale</h2>
+    
+            <div>
+                <span class="material-icons cursor-pointer mr-4">search</span>
+                <span class="material-icons cursor-pointer">folder</span>
+            </div>
+        </header>
+
+        <div class="overflow-scroll inner-container px-4 flex flex-col-reverse w-full">
+            <div class="flex items-center mb-4">
+                <div class="rounded-full shadow bg-white w-8 h-8 flex items-center justify-center mr-4">
+                    <small class="font-semibold ">K</small>
+                </div>
+
+                <small class="font-semibold mr-4">Katrine Dutesta</small>
+                <small class="font-semibold opacity-50">12:43</small>
+            </div> 
+
+            <div class="p-4 mb-4 shadow w-fit rounded max-w-2/3">
+                <p>This is a test message</p>
+            </div>
+
+            <div class="text-center my-4">
+                <small class="text-xs font-semibold opacity-50 uppercase tracking-wide">I dag</small>
+            </div>
+
+            <div class="flex items-center self-end">
+                <small class="font-semibold opacity-50">12:43</small>
+            </div> 
+
+            <div class="p-4 mb-4 shadow rounded self-end max-w-2/3">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis aliquid, reiciendis molestias quibusdam quidem veritatis commodi recusandae necessitatibus deleniti. Ab temporibus dolores mollitia. Rerum eius id nobis minima, ducimus nostrum?</p>
+            </div>
+
+            <div class="p-4 mb-4 shadow w-fit rounded self-end max-w-2/3">
+                <p>This is a test message</p>
+            </div>
+
+            <div class="flex items-center">
+                <div class="rounded-full shadow bg-white w-8 h-8 flex items-center justify-center mr-4">
+                    <small class="font-semibold ">K</small>
+                </div>
+
+                <small class="font-semibold mr-4">Katrine Dutesta</small>
+                <small class="font-semibold opacity-50">12:43</small>
+            </div> 
+
+            <div class="p-4 mb-4 shadow w-fit rounded max-w-2/3">
+                <p>This is a test message</p>
+            </div>
+
+            <div class="p-4 mb-4 shadow w-fit rounded flex max-w-2/3">
+                <span class="material-icons mr-4">description</span>
+                <p>dokument.pdf</p>
+            </div>
+
+            <div class="text-center my-4">
+                <small class="text-xs font-semibold opacity-50 uppercase tracking-wide">Start på samtalen</small>
+            </div>
+        </div>
+    </section>
+
+    <nav class="fixed bottom-0 h-14 w-full bg-white z-50 shadow-sm">
+        <div id="standard-footer" class="flex justify-around items-center h-full hidden">
+            <span class="material-icons cursor-pointer">home</span>
+            <span class="material-icons cursor-pointer">forum</span>
+            <span class="material-icons cursor-pointer">add</span>
+            <span class="material-icons cursor-pointer">account_circle</span>
+            <span class="material-icons cursor-pointer">settings</span>
+        </div>
+
+        <div id="chat-footer" class="flex items-center h-full">
+            <span class="material-icons cursor-pointer px-4">attach_file</span>
+            <input class="bg-gray-100 rounded px-3 py-1 flex-grow" type="text" placeholder="Skriv din besked her...">
+            <span class="material-icons cursor-pointer px-4">send</span>
+        </div>
     </nav>
 </body>
 </html>
