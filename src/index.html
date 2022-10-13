@@ -627,6 +627,39 @@
         </div>
     </section>  
 
+    <section class="w-full h-screen z-10 bg-white absolute top-0">
+        <header class="h-14 p-4 flex justify-between items-center shadow-sm bg-white z-10">
+            <span class="material-icons cursor-pointer">arrow_back</span>
+
+            <p class="flex-grow text-left ml-4 text-sm font-medium">22:35</p>
+    
+            <div>
+                <span class="material-icons cursor-pointer mr-4">forum</span>
+                <span class="material-icons cursor-pointer">folder</span>
+            </div>
+        </header> 
+
+        <div class="overflow-scroll inner-container relative"> 
+            <div class="p-4 pb-20 overflow-hidden h-full">
+                <div class="flex h-1/2">
+                    <img src="https://fakeimg.pl/500" alt="" class="w-1/2">
+                    <img src="https://fakeimg.pl/500" alt="" class="w-1/2">
+                </div>
+
+                <img src="https://fakeimg.pl/1000x500" alt="" class="h-1/2 w-full">
+            </div>
+
+            <div class="absolute bottom-2 w-full">
+                <div class="shadow rounded-2xl w-96 mx-auto flex items-center justify-around p-4">
+                    <span class="material-icons cursor-pointer">keyboard_voice</span>
+                    <span class="material-icons cursor-pointer">video_camera_back</span>
+                    <span class="material-icons cursor-pointer">present_to_all</span>
+                    <span class="material-icons cursor-pointer">call_end</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <nav class="fixed bottom-0 h-14 w-full bg-white z-50 shadow-sm">
         <div id="standard-footer" class="flex justify-around items-center h-full hidden">
             <span class="material-icons cursor-pointer">home</span>
@@ -636,7 +669,7 @@
             <span class="material-icons cursor-pointer">settings</span>
         </div>
 
-        <div id="chat-footer" class="flex items-center h-full">
+        <div id="chat-footer" class="flex items-center h-full hidden">
             <span class="material-icons cursor-pointer px-4">attach_file</span>
             <input class="bg-gray-100 rounded px-3 py-1 flex-grow" type="text" placeholder="Skriv din besked her...">
             <span class="material-icons cursor-pointer px-4">send</span>
