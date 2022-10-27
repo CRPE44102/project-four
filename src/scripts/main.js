@@ -1,23 +1,14 @@
-const latestUpdatesContainer = document.getElementById("latest-updates-container")
-const latestUpdatesIconButton = document.getElementById("latest-updates-icon-button")
-const latestUpdatesCloseIconButton = document.getElementById("latest-updates-close-icon-button")
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, query, onSnapshot } from "firebase/firestore";
 
+const firebaseConfig = {
+  apiKey: "AIzaSyAOtwFQVsxGsigqon8AxOZnnA0HKpw4fVU",
+  authDomain: "now-learning.firebaseapp.com",
+  projectId: "now-learning",
+  storageBucket: "now-learning.appspot.com",
+  messagingSenderId: "949585480248",
+  appId: "1:949585480248:web:ca5487211b669df77874cd"
+};
 
-const toggleLatestUpdates = () => latestUpdatesContainer.classList.toggle("hidden")
-
-latestUpdatesIconButton.addEventListener("click", toggleLatestUpdates)
-latestUpdatesCloseIconButton.addEventListener("click", toggleLatestUpdates)
-
-const postResponseTextarea = document.getElementById("post-response-textarea")
-const postResponseCharacterCounter = document.getElementById("post-response-character-counter")
-
-postResponseTextarea.addEventListener("keyup", event => {
-    postResponseCharacterCounter.textContent = event.currentTarget.value.length
-})
-
-const postCreationTextarea = document.getElementById("post-creation-textarea")
-const postCreationCharacterCounter = document.getElementById("post-creation-character-counter")
-
-postCreationTextarea.addEventListener("keyup", event => {
-    postCreationCharacterCounter.textContent = event.currentTarget.value.length
-})
+const app = initializeApp(firebaseConfig);
+const firestore = getFirestore(app);

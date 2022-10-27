@@ -1,5 +1,27 @@
 {
   "devDependencies": {
-    "tailwindcss": "^3.1.8"
-  }
+    "tailwindcss": "^3.1.8",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "firebase": "^9.12.1"
+  },
+  "name": "project_four",
+  "description": "Projekt 4 - NowLearning, en platform til kommunikation.",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CRPE44102/project-four.git"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/CRPE44102/project-four/issues"
+  },
+  "homepage": "https://github.com/CRPE44102/project-four#readme"
 }
