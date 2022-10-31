@@ -80,13 +80,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/scripts/components/navigate.js":
+/*!********************************************!*\
+  !*** ./src/scripts/components/navigate.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(location) {\n    const request = new XMLHttpRequest()\n\n    request.open(\"get\", location + \".html\", true)\n\n    request.onreadystatechange = function() {\n        document.getElementById(\"content\").innerHTML= this.responseText;\n    }\n\n    request.send()\n}\n\n//# sourceURL=webpack://project_four/./src/scripts/components/navigate.js?");
+
+/***/ }),
+
 /***/ "./src/scripts/main.js":
 /*!*****************************!*\
   !*** ./src/scripts/main.js ***!
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ \"./node_modules/firebase/app/dist/index.esm.js\");\n/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/firestore */ \"./node_modules/firebase/firestore/dist/index.esm.js\");\n/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/storage */ \"./node_modules/firebase/storage/dist/index.esm.js\");\n\n\n\n\nconst firebaseConfig = {\n  apiKey: \"AIzaSyAOtwFQVsxGsigqon8AxOZnnA0HKpw4fVU\",\n  authDomain: \"now-learning.firebaseapp.com\",\n  projectId: \"now-learning\",\n  storageBucket: \"now-learning.appspot.com\",\n  messagingSenderId: \"949585480248\",\n  appId: \"1:949585480248:web:ca5487211b669df77874cd\"\n};\n\nconst app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)(firebaseConfig);\nconst firestore = (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.getFirestore)(app);\nconst storage = (0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.getStorage)(app);\n\n\n//# sourceURL=webpack://project_four/./src/scripts/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ \"./node_modules/firebase/app/dist/index.esm.js\");\n/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/firestore */ \"./node_modules/firebase/firestore/dist/index.esm.js\");\n/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/storage */ \"./node_modules/firebase/storage/dist/index.esm.js\");\n/* harmony import */ var _components_navigate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/navigate */ \"./src/scripts/components/navigate.js\");\n\n\n\n\n\n\nconst firebaseConfig = {\n  apiKey: \"AIzaSyAOtwFQVsxGsigqon8AxOZnnA0HKpw4fVU\",\n  authDomain: \"now-learning.firebaseapp.com\",\n  projectId: \"now-learning\",\n  storageBucket: \"now-learning.appspot.com\",\n  messagingSenderId: \"949585480248\",\n  appId: \"1:949585480248:web:ca5487211b669df77874cd\"\n};\n\nconst app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)(firebaseConfig);\nconst firestore = (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.getFirestore)(app);\nconst storage = (0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.getStorage)(app);\n\n\n//# sourceURL=webpack://project_four/./src/scripts/main.js?");
 
 /***/ }),
 
