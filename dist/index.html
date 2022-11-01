@@ -7,9 +7,22 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.typekit.net/yod0xgs.css">
+                
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/main.js" defer></script>
 </head>
-<body>
+<body class="bg-slate-200 pb-14 lg:pb-0 h-full">
+  <div class="flex min-h-full">
+    <div class="component" target="components/sidebar"></div>
+  
+    <!-- Primært content -->
+    <div id="content" class="w-full"> <!-- ALT I DENNE DIV -->
+      <div class="component" target="home"></div>
+    </div> <!-- CONTENT STOPPER HER-->
+  </div>
+
+  <div class="component" target="components/footer"></div>
 </body>
 </html>

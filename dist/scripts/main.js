@@ -80,13 +80,33 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/scripts/components/content-loader.js":
+/*!**************************************************!*\
+  !*** ./src/scripts/components/content-loader.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadContent)\n/* harmony export */ });\n/* harmony import */ var _reloader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reloader */ \"./src/scripts/components/reloader.js\");\n\n_reloader__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n\nfunction loadContent() {\n    const request = new XMLHttpRequest()\n    const elements = document.getElementsByClassName(\"component\")\n\n    if (elements.length == 0) return\n\n    const item = elements[0]\n    item.classList.remove(\"component\")\n\n    request.open(\"get\", item.getAttribute(\"target\") + \".html\", true)\n\n    request.addEventListener(\"load\", () => {\n        item.innerHTML = request.responseText\n        loadContent()\n        ;(0,_reloader__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n    })\n\n    request.send()\n}\n\n//# sourceURL=webpack://project_four/./src/scripts/components/content-loader.js?");
+
+/***/ }),
+
 /***/ "./src/scripts/components/navigate.js":
 /*!********************************************!*\
   !*** ./src/scripts/components/navigate.js ***!
   \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(location) {\n    const request = new XMLHttpRequest()\n\n    request.open(\"get\", location + \".html\", true)\n\n    request.onreadystatechange = function() {\n        document.getElementById(\"content\").innerHTML= this.responseText;\n    }\n\n    request.send()\n}\n\n//# sourceURL=webpack://project_four/./src/scripts/components/navigate.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ navigate)\n/* harmony export */ });\n/* harmony import */ var _content_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./content-loader */ \"./src/scripts/components/content-loader.js\");\n/* harmony import */ var _reloader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reloader */ \"./src/scripts/components/reloader.js\");\n\n\n_reloader__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n\nlet latestTarget = \"home\"\n\nfunction navigate(location) {\n    if (latestTarget === location) return\n    latestTarget = location\n\n    const request = new XMLHttpRequest()\n\n    request.open(\"get\", location + \".html\", true)\n\n    request.addEventListener(\"readystatechange\", () => {\n        document.getElementById(\"content\").innerHTML= request.responseText;\n        (0,_content_loader__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n        ;(0,_reloader__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n    })\n\n    request.send()\n}\n\n//# sourceURL=webpack://project_four/./src/scripts/components/navigate.js?");
+
+/***/ }),
+
+/***/ "./src/scripts/components/reloader.js":
+/*!********************************************!*\
+  !*** ./src/scripts/components/reloader.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ reloadNavigators)\n/* harmony export */ });\n/* harmony import */ var _navigate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigate */ \"./src/scripts/components/navigate.js\");\n\n\nfunction reloadNavigators() {\n    const navigators = document.getElementsByClassName(\"navigator\")\n\n    for (let i = 0; i < navigators.length; i++) {\n        const nav = navigators[i]\n        const hasListener = nav.getAttribute(\"listener\")\n        const target = nav.getAttribute(\"target\")\n        \n        if (!hasListener) {\n            nav.setAttribute(\"listener\", true)\n            nav.addEventListener(\"click\", () => {\n                ;(0,_navigate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(target)\n            })\n        }\n    }\n}\n\n//# sourceURL=webpack://project_four/./src/scripts/components/reloader.js?");
 
 /***/ }),
 
@@ -96,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ \"./node_modules/firebase/app/dist/index.esm.js\");\n/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/firestore */ \"./node_modules/firebase/firestore/dist/index.esm.js\");\n/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/storage */ \"./node_modules/firebase/storage/dist/index.esm.js\");\n/* harmony import */ var _components_navigate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/navigate */ \"./src/scripts/components/navigate.js\");\n\n\n\n\n\n\nconst firebaseConfig = {\n  apiKey: \"AIzaSyAOtwFQVsxGsigqon8AxOZnnA0HKpw4fVU\",\n  authDomain: \"now-learning.firebaseapp.com\",\n  projectId: \"now-learning\",\n  storageBucket: \"now-learning.appspot.com\",\n  messagingSenderId: \"949585480248\",\n  appId: \"1:949585480248:web:ca5487211b669df77874cd\"\n};\n\nconst app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)(firebaseConfig);\nconst firestore = (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.getFirestore)(app);\nconst storage = (0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.getStorage)(app);\n\n\n//# sourceURL=webpack://project_four/./src/scripts/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ \"./node_modules/firebase/app/dist/index.esm.js\");\n/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/firestore */ \"./node_modules/firebase/firestore/dist/index.esm.js\");\n/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/storage */ \"./node_modules/firebase/storage/dist/index.esm.js\");\n/* harmony import */ var _components_navigate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/navigate */ \"./src/scripts/components/navigate.js\");\n/* harmony import */ var _components_content_loader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/content-loader */ \"./src/scripts/components/content-loader.js\");\n\n\n\n\n\n\n\n(0,_components_content_loader__WEBPACK_IMPORTED_MODULE_4__[\"default\"])()\n\nconst firebaseConfig = {\n  apiKey: \"AIzaSyAOtwFQVsxGsigqon8AxOZnnA0HKpw4fVU\",\n  authDomain: \"now-learning.firebaseapp.com\",\n  projectId: \"now-learning\",\n  storageBucket: \"now-learning.appspot.com\",\n  messagingSenderId: \"949585480248\",\n  appId: \"1:949585480248:web:ca5487211b669df77874cd\"\n};\n\nconst app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)(firebaseConfig);\nconst firestore = (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.getFirestore)(app);\nconst storage = (0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.getStorage)(app);\n\n//# sourceURL=webpack://project_four/./src/scripts/main.js?");
 
 /***/ }),
 

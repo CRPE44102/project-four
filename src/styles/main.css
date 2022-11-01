@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    font-family: 'proxima-nova', sans-serif;
+}
+
+html {
+    height: 100%;
+}
