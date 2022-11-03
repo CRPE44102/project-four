@@ -5,13 +5,24 @@
     <span class="navigator material-icons p-4 text-white cursor-pointer" target="home">search</span>
 </div>
 
-<div class="container p-4 lg:px-20 pb-14 lg:pb-4">
-    <div class="hidden lg:block h-16"></div>
+<div class="container p-4 lg:px-20 pb-14 lg:pb-4 h-screen flex flex-col">
+    <div class="hidden h-16 lg:flex justify-end">
+        <span class="navigator cursor-pointer material-icons mx-4" target="pages/call">call</span>
+        <span class="navigator cursor-pointer material-icons" target="pages/files">folder</span>
+    </div>
 
-    <div class="p-4 rounded mb-4">
-        <div class="component" target="components/conversation"></div>
-        <div class="component" target="components/conversation"></div>
-        <div class="component" target="components/conversation"></div>
-        <div class="component" target="components/conversation"></div>
+    <div class="flex grow">
+        <div class="p-4 rounded mb-4 w-full lg:max-w-fit lg:mr-4">
+            <div class="component" target="components/conversation"></div>
+            <div class="component" target="components/conversation"></div>
+            <div class="component" target="components/conversation"></div>
+            <div class="component" target="components/conversation"></div>
+        </div>
+    
+        <div class="grow">
+            <div class="component hidden lg:block" target="components/chat-header"></div>
+        
+            <div class="component h-full hidden lg:block" target="components/chat"></div>
+        </div>
     </div>
 </div>
