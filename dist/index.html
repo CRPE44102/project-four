@@ -12,6 +12,10 @@
                 
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/individual/maja.js" defer></script>
+    <script src="scripts/individual/rikke.js" defer></script>
+    <script src="scripts/individual/peter.js" defer></script>
+    <script src="scripts/individual/keanu.js" defer></script>
 </head>
 <body class="bg-slate-200 pb-14 lg:pb-0 h-full">
   <div class="flex min-h-full">
@@ -19,7 +23,14 @@
   
     <!-- Primært content -->
     <div id="content" class="w-full"> <!-- ALT I DENNE DIV -->
-      <div class="component" target="home"></div>
+      <!-- <div class="component" target="home"></div> -->
+      <div class="relative">
+        <div id="slide1" class="bg-blue-500 h-40 w-full absolute opacity-1 hidden"></div>
+        <div id="slide2" class="bg-red-500 h-40 w-full absolute opacity-0 hidden"></div>
+        <div id="slide3" class="bg-purple-500 h-40 w-full absolute opacity-0 hidden"></div>
+
+        <div class="opacity-1 opacity-95 opacity-90 opacity-80 opacity-75 opacity-70 opacity-60 opacity-50 opacity-40 opacity-30 opacity-25 opacity-20 opacity-10 opacity-5 opacity-0"></div>
+      </div>
     </div> <!-- CONTENT STOPPER HER-->
   </div>
 
