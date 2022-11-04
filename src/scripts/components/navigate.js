@@ -1,6 +1,5 @@
 import loadContent from "./content-loader";
 import reloadNavigators from "./reloader";
-reloadNavigators
 
 let latestTarget = "home"
 
