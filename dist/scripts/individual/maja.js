@@ -22,19 +22,14 @@ const slide1 = document.getElementById("slide1")
 const slide2 = document.getElementById("slide2")
 const slide3 = document.getElementById("slide3")
 
-const initFade = async (currentSlide, nextSlide) => {
-    fadein(nextSlide)
-    fadeout(currentSlide)
-}
-
-const fadeout = async (target) => {
-    await fade(target, reversed)
-    // target.classList.add("hidden")
-}
-
-const fadein = async (target) => {
-    // target.classList.remove("hidden")
-    await fade(target, opacities)
+const initFade = (currentSlide, nextSlide) => {
+ 
+    // nextSlide.classList.toggle("hidden")
+    fade(nextSlide, opacities)
+    
+    fade(currentSlide, reversed).then(() => {
+        // currentSlide.classList.toggle("hidden")
+    })
 }
 
 const fade = async (target, properties) => {
@@ -44,7 +39,6 @@ const fade = async (target, properties) => {
         target.classList.remove(properties[i - 1])
     }
 }
-
 const sleep = async (duration = 100) => {
     return new Promise(r => setTimeout(r, duration))
 }
@@ -54,7 +48,7 @@ const slides = [
     slide2,
     slide3,
 ]
-
+ 
 let currentSlide = 0
 
 setInterval(() => {

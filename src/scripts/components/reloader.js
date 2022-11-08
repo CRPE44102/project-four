@@ -11,7 +11,7 @@ export default function reloadNavigators() {
         if (!hasListener) {
             nav.setAttribute("listener", true)
             nav.addEventListener("click", () => {
-                navigate(target)
+                navigate(target, nav.classList.contains("fab-toggle"))
             })
         }
     }

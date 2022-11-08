@@ -1,4 +1,4 @@
-openNav = async () => {
+function openNav() {
 	let widths = []
     const max = 250
    	let currentIndex = 0

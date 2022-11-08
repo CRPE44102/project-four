@@ -3,8 +3,21 @@ import reloadNavigators from "./reloader";
 
 let latestTarget = "home"
 
-export default function navigate(location) {
+export default function navigate(location, toggleFab) {
     if (latestTarget === location) return
+
+    if (toggleFab) {
+        console.log("has toggle");
+
+        document.getElementById("fab").classList.toggle("hidden")
+        
+        if (document.getElementById("fab").classList.contains("hidden")) {
+            document.getElementById("fab").style.display = "none"
+        } else {
+            document.getElementById("fab").style.display = "flex"
+        }
+    }
+
     latestTarget = location
 
     const request = new XMLHttpRequest()

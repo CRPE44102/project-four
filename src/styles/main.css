@@ -8,4 +8,86 @@
 
 html {
     height: 100%;
+
+}
+
+.menu{
+    /* position: relative; */
+    pointer-events: none;
+    width: 280px;
+    height: 110px;
+    /* display: flex; */
+    justify-content: center;
+}
+
+.menu li{
+    position: absolute;
+    left: 0;
+    pointer-events: all;
+    list-style: none;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform-origin: 140px;
+    color: #fff;
+    transform: rotate(0deg) translateX(110px);
+}
+
+.menu li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    color: var(--clr);
+    border: 2px solid var(--clr);
+    border-radius: 50%;
+    font-size: 1.5em;
+    transition: 1s;
+    background: #EE866F;
+}
+
+.menu .toggle{
+    position: absolute;
+    pointer-events: all;
+    width: 60px;
+    height: 60px;
+    background: #EE866F;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10000;
+    font-size: 2em;
+    transition: transform 1.25s;
+}
+
+.menu.active .toggle{
+    transform: rotate(315deg);
+}
+
+.creategroup {
+    transform: translate(0px);
+}
+
+.creategroup.active {
+    transform: translate(20px, -50px);
+}
+
+.createpost {
+    transform: translate(0px);
+}
+
+.createpost.active {
+    transform: translate(110px, -100px);
+}
+
+.createcat {
+    transform: translate(0px);
+}
+
+.createcat.active {
+    transform: translate(200px, -50px);
 }
