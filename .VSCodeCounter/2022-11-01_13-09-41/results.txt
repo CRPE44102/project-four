@@ -1,0 +1,47 @@
+Date : 2022-11-01 13:09:41
+Directory : /Users/christian/School/Code/project_four/dist
+Total : 17 files,  1554 codes, 229 comments, 356 blanks, all 2139 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| CSS        |          1 |        925 |        150 |        245 |      1,320 |
+| HTML       |         15 |        499 |         10 |         62 |        571 |
+| JavaScript |          1 |        130 |         69 |         49 |        248 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                        | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                           |         17 |      1,554 |        229 |        356 |      2,139 |
+| components                                                                  |          7 |         67 |          0 |          8 |         75 |
+| pages                                                                       |          4 |        147 |          4 |         23 |        174 |
+| scripts                                                                     |          1 |        130 |         69 |         49 |        248 |
+| styles                                                                      |          1 |        925 |        150 |        245 |      1,320 |
++-----------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                    | language   | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/christian/School/Code/project_four/dist/categories.html              | HTML       |        108 |          1 |         11 |        120 |
+| /Users/christian/School/Code/project_four/dist/chat.html                    | HTML       |        126 |          1 |         13 |        140 |
+| /Users/christian/School/Code/project_four/dist/components/category.html     | HTML       |         15 |          0 |          0 |         15 |
+| /Users/christian/School/Code/project_four/dist/components/chatsystem.html   | HTML       |          0 |          0 |          1 |          1 |
+| /Users/christian/School/Code/project_four/dist/components/footer.html       | HTML       |          7 |          0 |          0 |          7 |
+| /Users/christian/School/Code/project_four/dist/components/header.html       | HTML       |          7 |          0 |          1 |          8 |
+| /Users/christian/School/Code/project_four/dist/components/notification.html | HTML       |          7 |          0 |          1 |          8 |
+| /Users/christian/School/Code/project_four/dist/components/sidebar.html      | HTML       |         12 |          0 |          2 |         14 |
+| /Users/christian/School/Code/project_four/dist/components/textbox.html      | HTML       |         19 |          0 |          3 |         22 |
+| /Users/christian/School/Code/project_four/dist/home.html                    | HTML       |         28 |          1 |          3 |         32 |
+| /Users/christian/School/Code/project_four/dist/index.html                   | HTML       |         23 |          3 |          4 |         30 |
+| /Users/christian/School/Code/project_four/dist/pages/call.html              | HTML       |         21 |          0 |          6 |         27 |
+| /Users/christian/School/Code/project_four/dist/pages/files.html             | HTML       |         39 |          0 |          4 |         43 |
+| /Users/christian/School/Code/project_four/dist/pages/new.html               | HTML       |         38 |          1 |          4 |         43 |
+| /Users/christian/School/Code/project_four/dist/pages/posts.html             | HTML       |         49 |          3 |          9 |         61 |
+| /Users/christian/School/Code/project_four/dist/scripts/main.js              | JavaScript |        130 |         69 |         49 |        248 |
+| /Users/christian/School/Code/project_four/dist/styles/main.css              | CSS        |        925 |        150 |        245 |      1,320 |
+| Total                                                                       |            |      1,554 |        229 |        356 |      2,139 |
++-----------------------------------------------------------------------------+------------+------------+------------+------------+------------+

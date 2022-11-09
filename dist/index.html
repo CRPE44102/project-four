@@ -1,15 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.typekit.net/yod0xgs.css">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/individual/maja.js" defer></script>
+  <script src="scripts/individual/rikke.js" defer></script>
+  <script src="scripts/individual/peter.js" defer></script>
+  <script src="scripts/individual/keanu.js" defer></script>
 </head>
-<body>
+
+<body class="bg-slate-200 pb-14 lg:pb-0 h-full">
+  <div class="flex min-h-full">
+    <div class="component" target="components/sidebar"></div>
+
+    <!-- Primært content -->
+    <div id="content" class="w-full">
+      <!-- ALT I DENNE DIV -->
+      <div class="component" target="home"></div>
+
+      <div class="relative">
+        <div id="slide1" class="bg-blue-500 h-40 w-full absolute opacity-1 hidden"></div>
+        <div id="slide2" class="bg-red-500 h-40 w-full absolute opacity-0 hidden"></div>
+        <div id="slide3" class="bg-purple-500 h-40 w-full absolute opacity-0 hidden"></div>
+
+        <div
+          class="opacity-1 opacity-95 opacity-90 opacity-80 opacity-75 opacity-70 opacity-60 opacity-50 opacity-40 opacity-30 opacity-25 opacity-20 opacity-10 opacity-5 opacity-0">
+        </div>
+      </div>
+    </div> <!-- CONTENT STOPPER HER-->
+  </div>
+
+  <footer class="lg:hidden h-14 bg-slate-900 fixed w-full bottom-0 text-white flex justify-around items-center">
+    <span class="navigator material-icons cursor-pointer" target="home">home</span>
+    <span class="navigator material-icons cursor-pointer" target="chat">question_answer</span>
+
+    <span></span>
+
+    <ul id="fab" class="menu lg:hidden absolute flex">
+      <div id="toggle" class="toggle">
+        <ion-icon name="add"></ion-icon>
+      </div>
+
+      <li class="creategroup" style="--i:0;--clr:#fff;">
+        <a href="chat.html">
+          <ion-icon name="person-add"></ion-icon>
+        </a>
+      </li>
+
+      <li class="createpost" style="--i:1;--clr:#fff;">
+        <a href="pages/posts.html">
+          <ion-icon name="create"></ion-icon>
+        </a>
+      </li>
+
+      <li class="createcat navigator" style="--i:2;--clr:#fff;">
+        <a href="categories.html">
+          <ion-icon name="layers"></ion-icon>
+        </a>
+      </li>
+    </ul>
+
+    <span class="material-icons cursor-pointer">person</span>
+    <span class="navigator material-icons cursor-pointer" target="pages/call">settings</span>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+      let toggle = document.querySelector('.toggle');
+      let menu = document.querySelector('.menu');
+      let creategroup = document.querySelector('.creategroup');
+      let createpost = document.querySelector('.createpost');
+      let createcat = document.querySelector('.createcat');
+      toggle.onclick = function () {
+        menu.classList.toggle('active')
+        creategroup.classList.toggle('active')
+        createpost.classList.toggle('active')
+        createcat.classList.toggle('active')
+      }
+
+      function openCircle() {
+        let heights = []
+        const min = -100
+        let currentIndex = 0
+
+        for (let i = 0; i > min; i--) {
+          heights.push(i)
+        }
+
+        while (true) {
+          if (currentIndex <= min) break
+
+          document.getElementsByClassName('createpost').style.height = (heights[currentIndex] + "px");
+
+
+          currentIndex--
+        }
+      }
+
+      function closeCircle() {
+        document.getElementsByClassName('createpost active').style.height = "0";
+      }
+    </script>
+  </footer>
 </body>
+
 </html>
