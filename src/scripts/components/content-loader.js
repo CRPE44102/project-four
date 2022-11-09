@@ -1,11 +1,13 @@
 import reloadNavigators from "./reloader"
-reloadNavigators
 
 export default function loadContent() {
     const request = new XMLHttpRequest()
     const elements = document.getElementsByClassName("component")
 
-    if (elements.length == 0) return
+    if (elements.length == 0) {
+        reloadNavigators()
+        return
+    }
 
     const item = elements[0]
     item.classList.remove("component")
@@ -15,22 +17,39 @@ export default function loadContent() {
     request.addEventListener("load", () => {
         item.innerHTML = request.responseText
         loadContent()
-        reloadNavigators()
-
-        try {
-            const clickMe = document.getElementById("clickMeBitch")
-
-            if (!clickMe.classList.contains("listening")) {
-                clickMe.classList.add("listening")
-                clickMe.addEventListener("click", openNav)
-            }
-        } catch (error) {
-            // console.log(error);
-        } 
     })
 
     request.send()
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const openNav = async () => {
