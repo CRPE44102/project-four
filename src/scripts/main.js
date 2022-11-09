@@ -2,7 +2,9 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
-import navigate from "./components/navigate";
+import loadContent from "./components/content-loader";
+
+loadContent()
 
 const firebaseConfig = {
   apiKey: "AIzaSyAOtwFQVsxGsigqon8AxOZnnA0HKpw4fVU",
